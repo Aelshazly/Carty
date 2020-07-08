@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50dp">
+    <ImageView android:layout_gravity="center" android:id="@+id/callout_left_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/com_navibees_sdk_callout_direction_btn"/>
+    <TextView android:textSize="15sp" android:textColor="#ff2400ff" android:layout_gravity="center" android:id="@+id/poi_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/hello_world"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/callout_right_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:src="@drawable/com_navibees_sdk_callout_gray_arrow"/>
+</LinearLayout>

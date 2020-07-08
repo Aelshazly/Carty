@@ -1,0 +1,18 @@
+package p008cz.msebera.android.httpclient;
+
+import java.io.IOException;
+
+/* renamed from: cz.msebera.android.httpclient.HttpClientConnection */
+public interface HttpClientConnection extends HttpConnection {
+    void flush() throws IOException;
+
+    boolean isResponseAvailable(int i) throws IOException;
+
+    void receiveResponseEntity(HttpResponse httpResponse) throws HttpException, IOException;
+
+    HttpResponse receiveResponseHeader() throws HttpException, IOException;
+
+    void sendRequestEntity(HttpEntityEnclosingRequest httpEntityEnclosingRequest) throws HttpException, IOException;
+
+    void sendRequestHeader(HttpRequest httpRequest) throws HttpException, IOException;
+}

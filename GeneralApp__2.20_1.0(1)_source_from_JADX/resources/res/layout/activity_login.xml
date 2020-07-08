@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/bg_color_active" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="32sp" android:textColor="@color/black" android:id="@+id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="NaviBees Operational App" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/loginLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_centerInParent="true">
+        <TextView android:textSize="18sp" android:textColor="@color/black" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="Please login to continue"/>
+        <EditText android:textSize="14sp" android:id="@+id/ed_username" android:background="@drawable/border" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter Username" android:inputType="text"/>
+        <EditText android:textSize="14sp" android:id="@+id/ed_password" android:background="@drawable/border" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="Enter Password" android:inputType="textPassword"/>
+        <Button android:textColor="@color/bg_color" android:id="@+id/bt_login" android:background="?attr/txtBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Login"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/VenuesListLayout" android:background="@color/bg_color_active" android:padding="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="Please Select a venue"/>
+        <View android:background="@color/black" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <ListView android:id="@+id/VenuesList" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@+id/singleVenueLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp" android:layout_above="@+id/version" android:layout_below="@+id/title">
+        <TextView android:textSize="24sp" android:textColor="@color/black" android:id="@+id/venueNameTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <Button android:textColor="@color/bg_color" android:id="@+id/bt_continue" android:background="?attr/txtBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Continue"/>
+            <Button android:textColor="@color/bg_color" android:id="@+id/bt_logout" android:background="?attr/txtBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Logout"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:textSize="18sp" android:textColor="@color/black" android:id="@+id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:text="@string/version" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

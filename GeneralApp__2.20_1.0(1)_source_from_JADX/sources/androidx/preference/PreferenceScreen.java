@@ -1,0 +1,41 @@
+package androidx.preference;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import androidx.core.content.res.TypedArrayUtils;
+import androidx.preference.PreferenceManager.OnNavigateToScreenListener;
+
+public final class PreferenceScreen extends PreferenceGroup {
+    private boolean mShouldUseGeneratedIds = true;
+
+    public PreferenceScreen(Context context, AttributeSet attrs) {
+        super(context, attrs, TypedArrayUtils.getAttr(context, C1048R.attr.preferenceScreenStyle, 16842891));
+    }
+
+    /* access modifiers changed from: protected */
+    public void onClick() {
+        if (getIntent() == null && getFragment() == null && getPreferenceCount() != 0) {
+            OnNavigateToScreenListener listener = getPreferenceManager().getOnNavigateToScreenListener();
+            if (listener != null) {
+                listener.onNavigateToScreen(this);
+            }
+        }
+    }
+
+    /* access modifiers changed from: protected */
+    public boolean isOnSameScreenAsChildren() {
+        return false;
+    }
+
+    public boolean shouldUseGeneratedIds() {
+        return this.mShouldUseGeneratedIds;
+    }
+
+    public void setShouldUseGeneratedIds(boolean shouldUseGeneratedIds) {
+        if (!isAttached()) {
+            this.mShouldUseGeneratedIds = shouldUseGeneratedIds;
+            return;
+        }
+        throw new IllegalStateException("Cannot change the usage of generated IDs while attached to the preference hierarchy");
+    }
+}

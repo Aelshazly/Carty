@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="15dp" android:layout_alignParentRight="true">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:gravity="center_vertical" android:layout_gravity="right" android:id="@+id/activityNameTextView" android:layout_width="wrap_content" android:layout_height="0dp" android:text="@string/hello_world" android:layout_weight="1"/>
+        <TextView android:gravity="center_vertical" android:layout_gravity="right" android:id="@+id/activityStartEndDateTextView" android:layout_width="wrap_content" android:layout_height="0dp" android:text="@string/hello_world" android:layout_weight="1"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/activityInfoImageView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:src="@android:drawable/ic_dialog_info" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="?attr/txtBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" app:titleTextColor="@color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="100">
+        <FrameLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="50" android:layout_above="@+id/navigate"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="10">
+            <Button android:id="@+id/start_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start"/>
+            <Button android:textColor="#ee0000" android:id="@+id/path_confidence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PC Enable"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textSize="14sp" android:gravity="right" android:id="@+id/mr_nr" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="3dp"/>
+        <TextView android:textSize="14sp" android:gravity="right" android:id="@+id/location_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="3dp"/>
+        <TextView android:textSize="14sp" android:gravity="right" android:id="@+id/dbg_rssi" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="3dp"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/beacon_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="40"/>
+    </LinearLayout>
+</RelativeLayout>

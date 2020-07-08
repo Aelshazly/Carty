@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#faf6ef" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/spaceInCenter" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/navibees" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/com_navibees_sdk_splash" android:scaleType="center"/>
+        <TextView android:textSize="15sp" android:textColor="#9f9d98" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/copyright" android:fontFamily="helvetica regular"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/spaceInCenter" android:background="#faf6ef" android:layout_width="match_parent" android:layout_height="5dp" android:layout_centerVertical="true"/>
+    <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20dp" android:layout_above="@+id/logos" android:layout_below="@+id/spaceInCenter">
+        <TextView android:textSize="15sp" android:textColor="#9f9d98" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/powered_by" android:fontFamily="helvetica regular"/>
+        <ImageView android:id="@+id/esri" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/com_navibees_sdk_esri" android:scaleType="center"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/logos" android:background="#f3f0ec" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/mtvc" android:layout_width="0dp" android:layout_height="match_parent" android:src="@drawable/com_navibees_sdk_makkah" android:scaleType="center" android:layout_weight="1"/>
+        <ImageView android:id="@+id/gistic" android:layout_width="0dp" android:layout_height="match_parent" android:src="@drawable/com_navibees_sdk_gistic" android:scaleType="center" android:layout_weight="1"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar android:theme="@style/AboutToolbarTheme" android:id="@+id/about_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:layout_alignParentTop="true" app:layout_collapseMode="1" app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+</RelativeLayout>

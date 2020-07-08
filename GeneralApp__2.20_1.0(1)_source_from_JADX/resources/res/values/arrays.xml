@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="WorkingTime">
+    </array>
+    <array name="directions">
+        <item>IN</item>
+        <item>OUT</item>
+    </array>
+    <array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+    <array name="items">
+        <item>Map</item>
+        <item>POI</item>
+        <item>Facilities</item>
+        <item>Way Finding</item>
+    </array>
+    <array name="language_list_locale">
+        <item>ar</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>ur</item>
+    </array>
+    <array name="language_list_to_user">
+        <item>العربية</item>
+        <item>English</item>
+        <item>Français</item>
+        <item>Deutsch</item>
+        <item>اردو</item>
+    </array>
+    <array name="numbers">
+        <item>۰</item>
+        <item>۱</item>
+        <item>۲</item>
+        <item>۳</item>
+        <item>۴</item>
+        <item>۵</item>
+        <item>۶</item>
+        <item>۷</item>
+        <item>۸</item>
+        <item>۹</item>
+    </array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#e6e4de" android:padding="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="1px">
+    <androidx.cardview.widget.CardView android:id="@+id/cardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="2dp" app:cardBackgroundColor="#fff" app:cardCornerRadius="10dp" app:cardElevation="1dp" app:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="center" android:id="@+id/iconImg" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/map"/>
+            <TextView android:textSize="8pt" android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:id="@+id/iconText" android:background="?attr/txtBackgroundColor" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:text="MAP" android:textAlignment="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

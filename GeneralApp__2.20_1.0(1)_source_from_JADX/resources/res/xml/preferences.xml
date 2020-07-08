@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <PreferenceCategory android:title="@string/preference_category_portal_title" android:summary="@string/preference_category_portal_summary">
+        <SwitchPreference android:title="@string/preference_portal_elevator_title" android:key="@string/com_navibees_sdk_preference_portal_elevator_key" android:defaultValue="true"/>
+        <SwitchPreference android:title="@string/preference_portal_escalator_title" android:key="@string/com_navibees_sdk_preference_portal_escalator_key" android:defaultValue="true"/>
+        <SwitchPreference android:title="@string/preference_portal_stair_title" android:key="@string/com_navibees_sdk_preference_portal_stair_key" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_language_title">
+        <ListPreference android:entries="@array/language_list_to_user" android:title="@string/preference_preferred_language" android:key="@string/preference_preferred_language_key" android:dialogTitle="@string/preference_preferred_language" android:entryValues="@array/language_list_locale"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_tts_title">
+        <SwitchPreference android:title="@string/preference_tts_enabled_by_user" android:key="@string/com_navibees_sdk_preference_user_enabled_tts_key" android:summary="@string/preference_tts_summary" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_gender">
+        <ListPreference android:entries="@array/genders" android:title="@string/preference_select_gender" android:key="@string/preference_gender" android:defaultValue="Male" android:entryValues="@array/genders"/>
+    </PreferenceCategory>
+</PreferenceScreen>

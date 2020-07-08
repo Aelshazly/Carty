@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/com_uqu_navibees_activities_activity_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.Toolbar android:theme="@style/AgendaToolbarTheme" android:id="@+id/agenda_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:layout_alignParentTop="true" app:layout_collapseMode="1" app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+</RelativeLayout>

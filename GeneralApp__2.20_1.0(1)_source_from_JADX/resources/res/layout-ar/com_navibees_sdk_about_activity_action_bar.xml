@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/abc_text_size_title_material_toolbar" android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hello_world" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="right" android:id="@+id/up_navigation" android:background="@android:color/white" android:layout_width="70dp" android:layout_height="match_parent" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center" android:layout_width="23dp" android:layout_height="21dp" android:layout_marginRight="15dp" android:src="@drawable/com_navibees_sdk_direction_arrow_right"/>
+    </LinearLayout>
+</RelativeLayout>

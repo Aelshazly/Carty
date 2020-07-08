@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.navibees.navigatorapp" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:name="android.hardware.location.network"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/title" android:icon="@mipmap/ic_launcher" android:name="com.navibees.navigatorapp.application.NavigatorApplication" android:debuggable="true" android:configChanges="locale|layoutDirection" android:allowBackup="true" android:hardwareAccelerated="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:roundIcon="@mipmap/ic_launcher" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="navigatorapp.page.link"/>
+                <data android:scheme="https" android:host="navigatorapp.page.link"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.AdvancedDebugActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.DebugIndoorLocationActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.TimeActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.AboutActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.AboutDetailActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.SettingActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.POIActivity"/>
+        <activity android:theme="@style/MapActivityTheme" android:name="com.navibees.navigatorapp.p010ui.activities.MapViewActivity" android:multiprocess="false" android:launchMode="standard" android:screenOrientation="fullSensor" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.SplashActivity"/>
+        <activity android:name="com.navibees.navigatorapp.p010ui.activities.MainActivity"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.Dialog" android:name="com.navibees.visioglobe.utils.InstallActivity" android:screenOrientation="user" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.Dialog" android:name="com.navibees.visioglobe.utils.DownloadHelper" android:screenOrientation="user" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.Dialog" android:name="com.navibees.visioglobe.utils.UnzipHelper" android:screenOrientation="user" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.navibees.maps.MapActivity"/>
+        <activity android:name="com.navibees.core.activity.RouteToActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.navibees.core.activity.POIsCategoriesFilterActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.navibees.core.activity.AboutActivity"/>
+        <activity android:name="com.navibees.core.activity.ActivitiesActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.navibees.core.activity.NotificationHandlerActivity"/>
+        <receiver android:name="com.navibees.core.model.postioning.MonitoringRegionsReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.navibees.monitored.internal.action"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.navibees.core.model.metadata.BatteryStatusIntentService" android:exported="false"/>
+        <service android:name="com.navibees.core.model.postioning.MonitoringRegionsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.navibees.core.model.pns.NavibeesFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.navibees.core.model.analytics.NaviBeesBackgroundAnalyticsReceiver"/>
+        <service android:name="com.navibees.core.model.analytics.NaviBeesBackgroundAnalyticsService" android:exported="false"/>
+        <service android:name="com.navibees.core.blesdk.BeaconService" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.navibees.navigatorapp.firebaseinitprovider" android:initOrder="100"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    </application>
+</manifest>

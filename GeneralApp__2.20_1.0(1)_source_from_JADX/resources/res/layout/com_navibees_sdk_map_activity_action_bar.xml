@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/abc_text_size_title_material_toolbar" android:textStyle="bold" android:id="@+id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/app_name" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/floorsSelectionContainer" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/moreActions">
+        <ImageView android:id="@+id/floorsSelectionIcon" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/com_navibees_sdk_floor_btn" android:scaleType="center"/>
+        <TextView android:textSize="25dp" android:typeface="sans" android:textColor="#ff1616ff" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/floorName" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="G"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/moreActions" android:layout_width="50dp" android:layout_height="match_parent" android:src="@drawable/com_navibees_sdk_menu_btn" android:scaleType="center" android:layout_alignParentRight="true"/>
+</RelativeLayout>

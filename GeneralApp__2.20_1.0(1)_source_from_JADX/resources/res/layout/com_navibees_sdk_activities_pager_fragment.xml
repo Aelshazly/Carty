@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout android:id="@+id/activitiesTabs" android:layout_width="match_parent" android:layout_height="50dp" android:layoutDirection="ltr"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/activitiesViewPager" android:layout_width="match_parent" android:layout_height="match_parent" android:layoutDirection="ltr"/>
+</LinearLayout>
